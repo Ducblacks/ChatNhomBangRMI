@@ -37,9 +37,9 @@ Các client hiển thị tin nhắn trong giao diện (GUI/console).<br>
 - **Java Swing** – xây dựng giao diện client.  
 - **Eclipse IDE / NetBeans IDE** – phát triển và chạy chương trình. 
 
-## 🚀 3. Các project đã thực hiện
+## 🚀 3. Hình ảnh các chức năng chính
 
-### [Khoá 16](./docs/projects/K16/README.md)
+
 
 ## 📝 4. License
 
