@@ -64,6 +64,10 @@ Các client hiển thị tin nhắn trong giao diện (GUI/console).<br>
 
 - Danh sách người dùng sẽ tự động cập nhật khi có người tham gia hoặc thoát.
 
+## 5. Liên hệ
+Nguyễn Việt Đức
+SDT: 0329159721
+Emai: nguyenvietduc71221@gmail.com
 © 2025 **NguyenVietDuc**, Faculty of Information Technology, DaiNam University. All rights reserved.
 
 ---
