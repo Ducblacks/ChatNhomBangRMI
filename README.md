@@ -21,6 +21,7 @@
 
 ## 📖 1. Giới thiệu
 Chat nhóm bằng RMI (Remote Method Invocation) là một ứng dụng cho phép nhiều người dùng trên các máy tính khác nhau kết nối và trao đổi tin nhắn theo thời gian thực thông qua mạng. RMI trong Java cho phép gọi các phương thức từ xa (remote method) giống như gọi phương thức cục bộ, nhờ đó client và server có thể giao tiếp trực tiếp qua các interface được định nghĩa sẵn.<br>
+
 Thành phần chính:<br>
 Server RMI: quản lý danh sách client, nhận và phát tán tin nhắn tới tất cả các client trong nhóm.<br>
 Client RMI: kết nối đến server, gửi tin nhắn và nhận tin nhắn từ các client khác.<br>
