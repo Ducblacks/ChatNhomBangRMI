@@ -39,6 +39,9 @@ Các client hiển thị tin nhắn trong giao diện (GUI/console).<br>
 
 ## 🚀 3. Hình ảnh các chức năng chính
 
+
+
+
 ## 🚀 4.  Các bước cài đặt
 
 ### Bước 1: Chuẩn bị môi trường
@@ -48,16 +51,11 @@ Các client hiển thị tin nhắn trong giao diện (GUI/console).<br>
   ```bash
 ### Bước 2: Khởi động Server
 - Mở project trong Eclipse/NetBeans.
-
 - Chạy file ChatServer.java để khởi động server.
-
-- Nếu chạy thành công sẽ hiển thị thông báo server đã sẵn sàng lắng nghe client.
 
 ### Bước 3: Khởi động Client
 - Chạy file ChatClient.java (có thể mở nhiều cửa sổ client).
-
 - Nhập tên người dùng khi chương trình yêu cầu.
-
 - Kết nối tới server
 ### Bước 4: Bắt đầu chat nhóm 🎉
 - Nhập tin nhắn vào ô chat và nhấn Enter hoặc Send để gửi.
