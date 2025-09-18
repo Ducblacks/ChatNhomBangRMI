@@ -20,16 +20,16 @@
 </div>
 
 ## 📖 1. Giới thiệu
-Chat nhóm bằng RMI (Remote Method Invocation) là một ứng dụng cho phép nhiều người dùng trên các máy tính khác nhau kết nối và trao đổi tin nhắn theo thời gian thực thông qua mạng. RMI trong Java cho phép gọi các phương thức từ xa (remote method) giống như gọi phương thức cục bộ, nhờ đó client và server có thể giao tiếp trực tiếp qua các interface được định nghĩa sẵn.
-Thành phần chính:
-Server RMI: quản lý danh sách client, nhận và phát tán tin nhắn tới tất cả các client trong nhóm.
-Client RMI: kết nối đến server, gửi tin nhắn và nhận tin nhắn từ các client khác.
-Interface (Remote Interface): định nghĩa các phương thức từ xa (gửi tin, nhận tin, đăng ký client...).
+Chat nhóm bằng RMI (Remote Method Invocation) là một ứng dụng cho phép nhiều người dùng trên các máy tính khác nhau kết nối và trao đổi tin nhắn theo thời gian thực thông qua mạng. RMI trong Java cho phép gọi các phương thức từ xa (remote method) giống như gọi phương thức cục bộ, nhờ đó client và server có thể giao tiếp trực tiếp qua các interface được định nghĩa sẵn.<br>
+Thành phần chính:<br>
+Server RMI: quản lý danh sách client, nhận và phát tán tin nhắn tới tất cả các client trong nhóm.<br>
+Client RMI: kết nối đến server, gửi tin nhắn và nhận tin nhắn từ các client khác.<br>
+Interface (Remote Interface): định nghĩa các phương thức từ xa (gửi tin, nhận tin, đăng ký client...).<br>
 
-Cách hoạt động:
-Client đăng ký với server → server lưu lại thông tin client.
-Khi client gửi tin nhắn → server nhận tin → gửi lại cho tất cả client khác.
-Các client hiển thị tin nhắn trong giao diện (GUI/console).
+Cách hoạt động:<br>
+Client đăng ký với server → server lưu lại thông tin client.<br>
+Khi client gửi tin nhắn → server nhận tin → gửi lại cho tất cả client khác.<br>
+Các client hiển thị tin nhắn trong giao diện (GUI/console).<br>
 
 ## 🔧 2. Ngôn ngữ lập trình sử dụng: [![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white)](https://www.java.com/)
 - **Java RMI (Remote Method Invocation)** – giao tiếp Client - Server.  
