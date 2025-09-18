@@ -20,9 +20,21 @@
 </div>
 
 ## 📖 1. Giới thiệu
-Học phần trang bị cho người học những kiến thức nền tảng của lập trình mạng và các kỹ năng cần thiết để thiết kế và cài đặt các ứng dụng mạng và các chuẩn ở mức ứng dụng dựa trên mô hình Client/Server, có sử dụng các giao tiếp chương trình dựa trên Sockets. Kết thúc học phần, sinh viên có thể viết các chương trình ứng dụng mạng với giao thức tầng ứng dụng tự thiết kế.
+Chat nhóm bằng RMI (Remote Method Invocation) là một ứng dụng cho phép nhiều người dùng trên các máy tính khác nhau kết nối và trao đổi tin nhắn theo thời gian thực thông qua mạng. RMI trong Java cho phép gọi các phương thức từ xa (remote method) giống như gọi phương thức cục bộ, nhờ đó client và server có thể giao tiếp trực tiếp qua các interface được định nghĩa sẵn.
+Thành phần chính:
+Server RMI: quản lý danh sách client, nhận và phát tán tin nhắn tới tất cả các client trong nhóm.
+Client RMI: kết nối đến server, gửi tin nhắn và nhận tin nhắn từ các client khác.
+Interface (Remote Interface): định nghĩa các phương thức từ xa (gửi tin, nhận tin, đăng ký client...).
+
+Cách hoạt động:
+Client đăng ký với server → server lưu lại thông tin client.
+Khi client gửi tin nhắn → server nhận tin → gửi lại cho tất cả client khác.
+Các client hiển thị tin nhắn trong giao diện (GUI/console).
 
 ## 🔧 2. Ngôn ngữ lập trình sử dụng: [![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white)](https://www.java.com/)
+- **Java RMI (Remote Method Invocation)** – giao tiếp Client - Server.  
+- **Java Swing** – xây dựng giao diện client.  
+- **Eclipse IDE / NetBeans IDE** – phát triển và chạy chương trình. 
 
 ## 🚀 3. Các project đã thực hiện
 
