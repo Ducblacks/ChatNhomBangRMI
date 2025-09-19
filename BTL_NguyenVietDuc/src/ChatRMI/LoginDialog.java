@@ -2,54 +2,49 @@ package ChatRMI;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.List;
 
 public class LoginDialog extends JDialog {
     private JTextField usernameField;
-    private JComboBox<String> serverComboBox;
+    private JTextField serverAddressField;
     private boolean loginSuccess = false;
     private String selectedServer;
 
     public LoginDialog(Frame parent) {
         super(parent, "Đăng nhập Chat", true);
         initialize();
-        discoverServers();
     }
 
     private void initialize() {
         setLayout(new BorderLayout());
-        setSize(400, 300);
+        setSize(400, 200);
         setLocationRelativeTo(null);
 
-        JPanel panel = new JPanel(new GridLayout(4, 2, 10, 10));
+        JPanel panel = new JPanel(new GridLayout(3, 2, 10, 10));
         panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
         usernameField = new JTextField("User" + (int)(Math.random() * 1000));
-        serverComboBox = new JComboBox<>();
-        serverComboBox.addItem("Đang tìm server...");
+        serverAddressField = new JTextField("localhost:1099");
 
         panel.add(new JLabel("Tên người dùng:"));
         panel.add(usernameField);
-        panel.add(new JLabel("Chọn server:"));
-        panel.add(serverComboBox);
+        panel.add(new JLabel("Địa chỉ server:"));
+        panel.add(serverAddressField);
 
-        JButton refreshButton = new JButton("Làm mới");
         JButton loginButton = new JButton("Kết nối");
         JButton cancelButton = new JButton("Hủy");
 
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
-        buttonPanel.add(refreshButton);
         buttonPanel.add(cancelButton);
         buttonPanel.add(loginButton);
 
-        refreshButton.addActionListener(e -> discoverServers());
         loginButton.addActionListener(e -> {
-            if (serverComboBox.getSelectedIndex() > 0) {
-                selectedServer = (String) serverComboBox.getSelectedItem();
+            String serverAddress = serverAddressField.getText().trim();
+            if (!serverAddress.isEmpty()) {
+                selectedServer = serverAddress;
                 loginSuccess = true;
                 dispose();
             } else {
-                JOptionPane.showMessageDialog(this, "Vui lòng chọn một server", 
+                JOptionPane.showMessageDialog(this, "Vui lòng nhập địa chỉ server", 
                     "Lỗi", JOptionPane.WARNING_MESSAGE);
             }
         });
@@ -57,27 +52,6 @@ public class LoginDialog extends JDialog {
 
         add(panel, BorderLayout.CENTER);
         add(buttonPanel, BorderLayout.SOUTH);
-    }
-
-    private void discoverServers() {
-        new Thread(() -> {
-            serverComboBox.removeAllItems();
-            serverComboBox.addItem("Đang tìm kiếm server...");
-            
-            List<String> servers = DiscoveryService.discoverServers();
-            
-            SwingUtilities.invokeLater(() -> {
-                serverComboBox.removeAllItems();
-                
-                if (servers.isEmpty()) {
-                    serverComboBox.addItem("Không tìm thấy server nào");
-                } else {
-                    for (String server : servers) {
-                        serverComboBox.addItem(server);
-                    }
-                }
-            });
-        }).start();
     }
 
     public String getUsername() {

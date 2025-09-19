@@ -107,7 +107,7 @@ public class ChatClient extends JFrame implements ChatInterface {
         new Thread(() -> {
             try {
                 updateStatus("Đang kết nối...", false);
-                server = DiscoveryService.connectToServer(serverAddress);
+                server = (ChatInterface) Naming.lookup("rmi://" + serverAddress + "/ChatService");
                 
                 ChatInterface clientStub = (ChatInterface) UnicastRemoteObject.exportObject(this, 0);
                 server.registerClient(clientStub, clientName);
@@ -188,11 +188,10 @@ public class ChatClient extends JFrame implements ChatInterface {
         updateUserList(clients);
     }
     
-	@Override
-	public boolean isAvailable() throws RemoteException {
-		// TODO Auto-generated method stub
-		return false;
-	}
+    @Override
+    public boolean isAvailable() throws RemoteException {
+        return connected;
+    }
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {

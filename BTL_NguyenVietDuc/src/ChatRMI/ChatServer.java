@@ -185,9 +185,9 @@ public class ChatServer extends JFrame implements ChatInterface {
     }
     
     @Override
-	public boolean isAvailable() throws RemoteException {
-		return true;
-	}
+    public boolean isAvailable() throws RemoteException {
+        return true;
+    }
 
     private void updateAllClientLists() {
         List<String> currentClients = new ArrayList<>(clientNames);
@@ -275,6 +275,4 @@ public class ChatServer extends JFrame implements ChatInterface {
             }
         });
     }
-
-	
 }
