@@ -49,7 +49,7 @@ Các client hiển thị tin nhắn trong giao diện (GUI/console).<br>
 - Cài đặt **Eclipse IDE** hoặc **NetBeans IDE**.  
 - Clone project từ GitHub về máy:  
   ```bash
-  gitclone (https://github.com/Ducblacks/ChatNhomBangRMI.git)
+  gitclone https://github.com/Ducblacks/ChatNhomBangRMI.git
 ### Bước 2: Khởi động Server
 - Mở project trong Eclipse/NetBeans.
 - Chạy file ChatServer.java để khởi động server.
