@@ -40,9 +40,10 @@ Các client hiển thị tin nhắn trong giao diện (GUI/console).<br>
 ## 🚀 3. Hình ảnh các chức năng chính
 
 ### 🔹 Giao diện server khi khởi chạy thành công
+![Server UI] docs/Images/Server_running.png
 
 ### 🔹 Chat nhóm và danh sách online
-
+![Client UI] docs/Images/Clients_running.png
 
 ## 🚀 4.  Các bước cài đặt
 
