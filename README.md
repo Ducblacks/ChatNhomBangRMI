@@ -39,7 +39,9 @@ Các client hiển thị tin nhắn trong giao diện (GUI/console).<br>
 
 ## 🚀 3. Hình ảnh các chức năng chính
 
+### 🔹 Giao diện server khi khởi chạy thành công
 
+### 🔹 Chat nhóm và danh sách online
 
 
 ## 🚀 4.  Các bước cài đặt
